@@ -4,7 +4,7 @@ services:
     container_name: portal
     restart: unless-stopped
     volumes:
-      - ./html:/usr/share/nginx/html:ro
+      - ./portal:/usr/share/nginx/html:ro
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.portal.rule=Host(`home.like`)"
