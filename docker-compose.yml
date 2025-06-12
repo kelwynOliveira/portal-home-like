@@ -1,0 +1,27 @@
+services:
+  portal:
+    image: nginx:alpine
+    container_name: portal
+    restart: unless-stopped
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portal.rule=Host(`home.like`)"
+      - "traefik.http.routers.portal.entrypoints=web"
+      - "traefik.http.services.portal.loadbalancer.server.port=80"
+    networks:
+      - traefik-net
+
+networks:
+  traefik-net:
+    external: true
+# services:
+#   portal:
+#     image: nginx:alpine
+#     container_name: portal
+#     restart: unless-stopped
+#     volumes:
+#       - ./portal:/usr/share/nginx/html:ro
+#     ports:
+#       - "8080:80"

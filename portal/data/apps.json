@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Portainer",
+    "description": "Gerenciamento de containers Docker",
+    "url": "http://portainer.like",
+    "icon": "🐳",
+    "status": "online",
+    "category": "DevOps",
+    "color": "#8b5cf6"
+  },
+  {
+    "name": "n8n-home",
+    "description": "Automação de fluxos de trabalho e integrações entre serviços",
+    "url": "http://n8n.like",
+    "icon": "🧩",
+    "status": "online",
+    "category": "Automação",
+    "color": "#ff0070"
+  },
+  {
+    "name": "n8n-kelwyn",
+    "description": "Automação de fluxos de trabalho e integrações entre serviços",
+    "url": "http://n8n-kelwyn.like",
+    "icon": "🧩",
+    "status": "online",
+    "category": "Automação",
+    "color": "#ff0070"
+  },
+  {
+    "name": "n8n-lidia",
+    "description": "Automação de fluxos de trabalho e integrações entre serviços",
+    "url": "http://n8n-lidia.like",
+    "icon": "🧩",
+    "status": "online",
+    "category": "Automação",
+    "color": "#ff0070"
+  },
+  {
+    "name": "Traefik",
+    "description": "Proxy reverso e roteamento dinâmico de aplicações",
+    "url": "http://traefik.like",
+    "icon": "🛣️",
+    "status": "online",
+    "category": "Infraestrutura",
+    "color": "#00b8d6"
+  },
+  {
+    "name": "Home Assistant",
+    "description": "Automação residencial e controle de dispositivos IoT",
+    "url": "http://home-assistant.like",
+    "icon": "🏠",
+    "status": "offline",
+    "category": "Automação",
+    "color": "#10b981"
+  },
+  {
+    "name": "Likeflix",
+    "description": "Streaming pessoal de filmes e séries",
+    "url": "http://likeflix.like",
+    "icon": "📺",
+    "status": "offline",
+    "category": "Mídia",
+    "color": "#e11d48"
+  },
+  {
+    "name": "Spotylike",
+    "description": "Streaming pessoal de músicas",
+    "url": "http://spoty.like",
+    "icon": "🎵",
+    "status": "offline",
+    "category": "Mídia",
+    "color": "#10b981"
+  },
+  {
+    "name": "Pi-hole",
+    "description": "Bloqueador de anúncios e DNS local",
+    "url": "http://pi-hole.like",
+    "icon": "🛡️",
+    "status": "offline",
+    "category": "Segurança",
+    "color": "#6366f1"
+  },
+  {
+    "name": "FinLike",
+    "description": "Gestão financeira pessoal com assistente por IA",
+    "url": "http://fin.like",
+    "icon": "💰",
+    "status": "offline",
+    "category": "Produtividade",
+    "color": "#22c55e"
+  },
+  {
+    "name": "PassLike",
+    "description": "Gerenciador de senhas seguro com criptografia local",
+    "url": "http://pass.like",
+    "icon": "🔐",
+    "status": "offline",
+    "category": "Segurança",
+    "color": "#1e3a8a"
+  },
+  {
+    "name": "TravelBuddy",
+    "description": "Assistente de viagens com IA para planejamento, rotas e recomendações",
+    "url": "http://travel.like",
+    "icon": "✈️",
+    "status": "online",
+    "category": "Assistentes",
+    "color": "#3b82f6"
+  },
+  {
+    "name": "Raven",
+    "description": "Assistente pessoal inteligente para o dia a dia com integração completa",
+    "url": "http://raven.like",
+    "icon": "🐦‍⬛",
+    "status": "offline",
+    "category": "Assistentes",
+    "color": "#7c3aed"
+  },
+  {
+    "name": "ChatLike",
+    "description": "Interface de chat com IA para perguntas gerais, criação e aprendizado",
+    "url": "http://chat.like",
+    "icon": "💬",
+    "status": "offline",
+    "category": "IA",
+    "color": "#8b5cf6"
+  },
+  {
+    "name": "EduLike",
+    "description": "Aplicação com foco em aprendizado com tutores e IA",
+    "url": "http://edu.like",
+    "icon": "📚",
+    "status": "offline",
+    "category": "Educação",
+    "color": "#f472b6"
+  },
+  {
+    "name": "NutriLike",
+    "description": "Assistente nutricional com IA para receitas, cardápio e avaliações",
+    "url": "http://nutri.like",
+    "icon": "🥗",
+    "status": "offline",
+    "category": "Saúde",
+    "color": "#84cc16"
+  },
+  {
+    "name": "FitLike",
+    "description": "Personal trainer virtual com foco em saúde e bem-estar",
+    "url": "http://fit.like",
+    "icon": "🏋️",
+    "status": "offline",
+    "category": "Saúde",
+    "color": "#ef4444"
+  },
+  {
+    "name": "Mentorlike",
+    "description": "Mentoria de carreira com IA para CV, entrevistas e LinkedIn",
+    "url": "http://mentor.like",
+    "icon": "🧑‍💼",
+    "status": "offline",
+    "category": "Produtividade",
+    "color": "#0f766e"
+  },
+  {
+    "name": "SocialLab",
+    "description": "Assistente criativo com IA para redes sociais",
+    "url": "http://social.like",
+    "icon": "📱",
+    "status": "offline",
+    "category": "Criatividade",
+    "color": "#ec4899"
+  },
+  {
+    "name": "InventoryHub",
+    "description": "Gestão da casa com inventários e IA para organização",
+    "url": "http://inventario.like",
+    "icon": "📦",
+    "status": "offline",
+    "category": "Casa",
+    "color": "#a855f7"
+  }
+]

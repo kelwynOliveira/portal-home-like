@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiKe Home Server</title>
+    <meta
+      name="description"
+      content="Portal de aplicações do servidor caseiro LiKe"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-icon">
+          <!-- <div class="server-icon">🖥️</div> -->
+          <svg
+            class="server-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-server w-16 h-16 text-blue-600 animate-pulse"
+            data-lov-id="src/components/Header.tsx:9:10"
+            data-lov-name="Server"
+            data-component-path="src/components/Header.tsx"
+            data-component-line="9"
+            data-component-file="Header.tsx"
+            data-component-name="Server"
+            data-component-content="%7B%22className%22%3A%22w-16%20h-16%20text-blue-600%20animate-pulse%22%7D"
+          >
+            <rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect>
+            <rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect>
+            <line x1="6" x2="6.01" y1="6" y2="6"></line>
+            <line x1="6" x2="6.01" y1="18" y2="18"></line>
+          </svg>
+          <!-- <div class="wifi-icon">📶</div> -->
+          <div class="header-icon">
+            <svg
+              class="wifi-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-wifi w-6 h-6 text-green-500 absolute -top-1 -right-1"
+              data-lov-id="src/components/Header.tsx:10:10"
+              data-lov-name="Wifi"
+              data-component-path="src/components/Header.tsx"
+              data-component-line="10"
+              data-component-file="Header.tsx"
+              data-component-name="Wifi"
+              data-component-content="%7B%22className%22%3A%22w-6%20h-6%20text-green-500%20absolute%20-top-1%20-right-1%22%7D"
+            >
+              <path d="M12 20h.01"></path>
+              <path d="M2 8.82a15 15 0 0 1 20 0"></path>
+              <path d="M5 12.859a10 10 0 0 1 14 0"></path>
+              <path d="M8.5 16.429a5 5 0 0 1 7 0"></path>
+            </svg>
+          </div>
+        </div>
+        <h1 class="title">LiKe Home Server</h1>
+        <p class="subtitle">Central de acesso às aplicações do servidor.</p>
+      </header>
+
+      <!-- Search bar -->
+      <section class="search-section">
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Pesquisar aplicações..."
+            class="search-input"
+          />
+          <span class="search-icon">🔍</span>
+        </div>
+      </section>
+
+      <!-- Aplications grid
+      <section class="applications-section">
+        <h2>Aplicações Disponíveis</h2>
+        <div class="applications-grid" id="applicationsGrid">
+          The applications are rendered with javascript
+        </div>
+      </section> -->
+      <section class="applications-section">
+        <h2>Aplicações Online</h2>
+        <div class="applications-grid" id="onlineAppsGrid">
+          <!-- Aplicações online serão renderizadas aqui -->
+        </div>
+      
+        <h2 style="margin-top: 2rem;">Aplicações Offline</h2>
+        <div class="applications-grid" id="offlineAppsGrid">
+          <!-- Aplicações offline serão renderizadas aqui -->
+        </div>
+      </section>
+      
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
