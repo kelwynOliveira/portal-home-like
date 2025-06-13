@@ -74,7 +74,7 @@
   {
     "name": "Pi-hole",
     "description": "Bloqueador de anúncios e DNS local",
-    "url": "http://pihole.like",
+    "url": "http://pihole.like/admin",
     "icon": "🛡️",
     "status": "online",
     "category": "Segurança",
