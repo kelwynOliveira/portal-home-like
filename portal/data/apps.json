@@ -76,7 +76,7 @@
     "description": "Bloqueador de anúncios e DNS local",
     "url": "http://pi-hole.like",
     "icon": "🛡️",
-    "status": "offline",
+    "status": "online",
     "category": "Segurança",
     "color": "#6366f1"
   },
