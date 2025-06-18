@@ -1,10 +1,11 @@
 services:
   portal:
-    image: nginx:alpine
+    image: portal
     container_name: portal
     restart: unless-stopped
-    volumes:
-      - ./portal:/usr/share/nginx/html:ro
+    build:
+      context: .
+      dockerfile: Dockerfile
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.portal.rule=Host(`home.like`)"

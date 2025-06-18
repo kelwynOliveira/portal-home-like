@@ -20,8 +20,8 @@ function createAppCard(app) {
       ${isOffline ? 'title="Aplicação offline"' : ""}
     >
       <div class="app-header">
-        <div class="app-icon" style="background-color: ${app.color}">
-          ${app.icon}
+        <div class="app-icon" style="background: ${app.color}">
+          <img class="app-icon-image" src="${app.icon}" alt="${app.name} logo">
         </div>
         <div class="app-info">
           <h3>${app.name}</h3>

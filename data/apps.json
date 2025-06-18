@@ -1,112 +1,114 @@
 [
   {
-    "name": "Portainer",
-    "description": "Gerenciamento de containers Docker",
-    "url": "http://portainer.like",
-    "icon": "🐳",
+    "name": "Fenrir",
+    "description": "Bloqueador de anúncios e DNS local",
+    "url": "http://fenrir.like/admin",
+    "icon": "https://raw.githubusercontent.com/kelwynOliveira/fenrir/24b36baa67471944e7276d86085b5d6587b7b0c4/img/logo.svg",
     "status": "online",
-    "category": "DevOps",
-    "color": "#8b5cf6"
+    "category": "Segurança",
+    "color": "linear-gradient(135deg, #3b82f6, #8b5cf6)"
   },
   {
     "name": "n8n-home",
     "description": "Automação de fluxos de trabalho e integrações entre serviços",
     "url": "http://n8n.like",
-    "icon": "🧩",
+    "icon": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/n8n.png",
     "status": "online",
     "category": "Automação",
-    "color": "#ff0070"
+    "color": "linear-gradient(135deg, #0a63ea, #fb006e)"
   },
   {
     "name": "n8n-kelwyn",
     "description": "Automação de fluxos de trabalho e integrações entre serviços",
     "url": "http://n8n-kelwyn.like",
-    "icon": "🧩",
+    "icon": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/n8n.png",
     "status": "online",
     "category": "Automação",
-    "color": "#ff0070"
+    "color": "linear-gradient(135deg, #0a63ea, #fb006e)"
   },
   {
     "name": "n8n-lidia",
     "description": "Automação de fluxos de trabalho e integrações entre serviços",
     "url": "http://n8n-lidia.like",
-    "icon": "🧩",
+    "icon": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/n8n.png",
     "status": "online",
     "category": "Automação",
-    "color": "#ff0070"
+    "color": "linear-gradient(135deg, #0a63ea, #fb006e)"
+  },
+  {
+    "name": "Portainer",
+    "description": "Gerenciamento de containers Docker",
+    "url": "http://portainer.like",
+    "icon": "https://github.com/portainer/portainer/blob/develop/app/assets/images/logo_ico.png?raw=true",
+    "status": "online",
+    "category": "DevOps",
+    "color": "linear-gradient(135deg, #242424, #2e3e48);"
   },
   {
     "name": "Traefik",
     "description": "Proxy reverso e roteamento dinâmico de aplicações",
     "url": "http://traefik.like",
-    "icon": "🛣️",
+    "icon": "https://cdn.worldvectorlogo.com/logos/traefik-1.svg",
     "status": "online",
     "category": "Infraestrutura",
-    "color": "#00b8d6"
+    "color": "linear-gradient(135deg, #ffffff, #ee0000)"
   },
   {
-    "name": "Home Assistant",
+    "name": "Sleipnir",
+    "description": "Assistente de viagens com IA para planejamento, rotas e recomendações",
+    "url": "http://sleipnir.like",
+    "icon": "./assets/logo-sleipnir-b.svg",
+    "status": "online",
+    "category": "Assistentes",
+    "color": "linear-gradient(135deg, #ffffff, #999999)"
+  },
+  {
+    "name": "Hestia",
     "description": "Automação residencial e controle de dispositivos IoT",
-    "url": "http://home-assistant.like",
+    "url": "http://hestia.like",
     "icon": "🏠",
     "status": "offline",
     "category": "Automação",
     "color": "#10b981"
   },
   {
-    "name": "Likeflix",
+    "name": "Apollo",
     "description": "Streaming pessoal de filmes e séries",
-    "url": "http://likeflix.like",
+    "url": "http://apollo.like",
     "icon": "📺",
     "status": "offline",
     "category": "Mídia",
     "color": "#e11d48"
   },
   {
-    "name": "Spotylike",
+    "name": "Bragi",
     "description": "Streaming pessoal de músicas",
-    "url": "http://spoty.like",
+    "url": "http://bragi.like",
     "icon": "🎵",
     "status": "offline",
     "category": "Mídia",
     "color": "#10b981"
   },
+
   {
-    "name": "Pi-hole",
-    "description": "Bloqueador de anúncios e DNS local",
-    "url": "http://pihole.like/admin",
-    "icon": "🛡️",
-    "status": "online",
-    "category": "Segurança",
-    "color": "#6366f1"
-  },
-  {
-    "name": "FinLike",
+    "name": "Plutus",
     "description": "Gestão financeira pessoal com assistente por IA",
-    "url": "http://fin.like",
+    "url": "http://plutus.like",
     "icon": "💰",
     "status": "offline",
-    "category": "Produtividade",
+    "category": "Gestão",
     "color": "#22c55e"
   },
   {
-    "name": "PassLike",
-    "description": "Gerenciador de senhas seguro com criptografia local",
-    "url": "http://pass.like",
+    "name": "Cerberus",
+    "description": "Gerenciador de senhas",
+    "url": "http://cerberus.like",
     "icon": "🔐",
     "status": "offline",
     "category": "Segurança",
     "color": "#1e3a8a"
   },
-  {
-    "name": "TravelBuddy",
-    "description": "Assistente de viagens com IA para planejamento, rotas e recomendações",
-    "url": "http://travel.like",
-    "icon": "✈️",
-    "status": "online",
-    "category": "Assistentes",
-    "color": "#3b82f6"
-  },
+
   {
     "name": "Raven",
     "description": "Assistente pessoal inteligente para o dia a dia com integração completa",
@@ -117,58 +119,76 @@
     "color": "#7c3aed"
   },
   {
-    "name": "ChatLike",
+    "name": "Calliope",
     "description": "Interface de chat com IA para perguntas gerais, criação e aprendizado",
-    "url": "http://chat.like",
+    "url": "http://caliope.like",
     "icon": "💬",
     "status": "offline",
     "category": "IA",
     "color": "#8b5cf6"
   },
   {
-    "name": "EduLike",
+    "name": "Saraswati",
     "description": "Aplicação com foco em aprendizado com tutores e IA",
-    "url": "http://edu.like",
+    "url": "http://saraswati.like",
     "icon": "📚",
     "status": "offline",
     "category": "Educação",
     "color": "#f472b6"
   },
   {
-    "name": "NutriLike",
+    "name": "Demeter",
     "description": "Assistente nutricional com IA para receitas, cardápio e avaliações",
-    "url": "http://nutri.like",
+    "url": "http://demeter.like",
     "icon": "🥗",
     "status": "offline",
     "category": "Saúde",
     "color": "#84cc16"
   },
   {
-    "name": "FitLike",
+    "name": "Hercules",
     "description": "Personal trainer virtual com foco em saúde e bem-estar",
-    "url": "http://fit.like",
+    "url": "http://hercules.like",
     "icon": "🏋️",
     "status": "offline",
     "category": "Saúde",
     "color": "#ef4444"
   },
   {
-    "name": "Mentorlike",
+    "name": "Quíron",
     "description": "Mentoria de carreira com IA para CV, entrevistas e LinkedIn",
-    "url": "http://mentor.like",
+    "url": "http://quiron.like",
     "icon": "🧑‍💼",
     "status": "offline",
     "category": "Produtividade",
     "color": "#0f766e"
   },
   {
-    "name": "SocialLab",
+    "name": "Loki",
     "description": "Assistente criativo com IA para redes sociais",
-    "url": "http://social.like",
+    "url": "http://loki.like",
     "icon": "📱",
     "status": "offline",
     "category": "Criatividade",
     "color": "#ec4899"
+  },
+  {
+    "name": "Ares",
+    "description": "Servidor de jogos",
+    "url": "http://ares.like",
+    "icon": "🎮",
+    "status": "offline",
+    "category": "Entretenimento",
+    "color": "#dc2626"
+  },
+  {
+    "name": "Seshat",
+    "description": "Gerenciador de arquivos",
+    "url": "http://seshat.like",
+    "icon": "📚",
+    "status": "offline",
+    "category": "Educação",
+    "color": "#f472b6"
   },
   {
     "name": "InventoryHub",
@@ -178,5 +198,14 @@
     "status": "offline",
     "category": "Casa",
     "color": "#a855f7"
+  },
+  {
+    "name": "Morfeu",
+    "description": "Conversor de arquivos",
+    "url": "http://morfeu.like",
+    "icon": "🔄",
+    "status": "offline",
+    "category": "Utilidades",
+    "color": "#64748b"
   }
 ]
