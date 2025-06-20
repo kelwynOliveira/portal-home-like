@@ -10,7 +10,7 @@ The **LiKe Home Server Portal** is a centralized portal designed to manage and a
 
 ## 🖼️ Preview
 
-![Home Page](./portal/assets/homepage.png)
+![Home Page](./assets/images/homepage.png)
 
 ---
 

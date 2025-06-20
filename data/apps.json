@@ -3,7 +3,7 @@
     "name": "Fenrir",
     "description": "Bloqueador de anúncios e DNS local",
     "url": "http://fenrir.like/admin",
-    "icon": "https://raw.githubusercontent.com/kelwynOliveira/fenrir/24b36baa67471944e7276d86085b5d6587b7b0c4/img/logo.svg",
+    "icon": "http://fenrir.like/admin/assets/logo/logo-fenrir.svg",
     "status": "online",
     "category": "Segurança",
     "color": "linear-gradient(135deg, #3b82f6, #8b5cf6)"
@@ -57,7 +57,7 @@
     "name": "Sleipnir",
     "description": "Assistente de viagens com IA para planejamento, rotas e recomendações",
     "url": "http://sleipnir.like",
-    "icon": "./assets/logo-sleipnir-b.svg",
+    "icon": "./assets/images/apps/sleipnir/logo-sleipnir-b.svg",
     "status": "online",
     "category": "Assistentes",
     "color": "linear-gradient(135deg, #ffffff, #999999)"
