@@ -63,6 +63,15 @@
     "color": "linear-gradient(135deg, #ffffff, #999999)"
   },
   {
+    "name": "Morfeu",
+    "description": "Conversor de arquivos",
+    "url": "http://morfeu.like",
+    "icon": "http://morfeu.like/assets/logo-morfeu.svg",
+    "status": "online",
+    "category": "Utilidades",
+    "color": "linear-gradient(135deg, #0a63ea, #999999)"
+  },
+  {
     "name": "Hestia",
     "description": "Automação residencial e controle de dispositivos IoT",
     "url": "http://hestia.like",
@@ -198,14 +207,5 @@
     "status": "offline",
     "category": "Casa",
     "color": "#a855f7"
-  },
-  {
-    "name": "Morfeu",
-    "description": "Conversor de arquivos",
-    "url": "http://morfeu.like",
-    "icon": "🔄",
-    "status": "offline",
-    "category": "Utilidades",
-    "color": "#64748b"
   }
 ]
