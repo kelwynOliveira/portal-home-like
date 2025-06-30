@@ -1,11 +1,12 @@
 services:
   portal:
-    image: portal
     container_name: portal
     restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - .:/usr/share/nginx/html
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.portal.rule=Host(`home.like`)"
@@ -13,6 +14,8 @@ services:
       - "traefik.http.services.portal.loadbalancer.server.port=80"
     networks:
       - traefik-net
+    ports:
+      - "2000:80"
 
 networks:
   traefik-net:
