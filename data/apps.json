@@ -72,10 +72,19 @@
     "color": "linear-gradient(135deg, #0a63ea, #999999)"
   },
   {
+    "name": "Loki",
+    "description": "Assistente criativo com IA para redes sociais",
+    "url": "http://loki.like",
+    "icon": "https://raw.githubusercontent.com/kelwynOliveira/loki/c1444850dcd506bb6e2b3e515a709e6c7e8f1f9e/assets/logo-loki.svg",
+    "status": "online",
+    "category": "Criatividade",
+    "color": "linear-gradient(135deg, #ec4899, #10b981)"
+  },
+  {
     "name": "Hestia",
     "description": "Automação residencial e controle de dispositivos IoT",
     "url": "http://hestia.like",
-    "icon": "🏠",
+    "icon": "./assets/images/apps/hestia.png",
     "status": "offline",
     "category": "Automação",
     "color": "#10b981"
@@ -84,7 +93,7 @@
     "name": "Apollo",
     "description": "Streaming pessoal de filmes e séries",
     "url": "http://apollo.like",
-    "icon": "📺",
+    "icon": "./assets/images/apps/apollo.png",
     "status": "offline",
     "category": "Mídia",
     "color": "#e11d48"
@@ -93,7 +102,7 @@
     "name": "Bragi",
     "description": "Streaming pessoal de músicas",
     "url": "http://bragi.like",
-    "icon": "🎵",
+    "icon": "./assets/images/apps/bragi.png",
     "status": "offline",
     "category": "Mídia",
     "color": "#10b981"
@@ -103,7 +112,7 @@
     "name": "Plutus",
     "description": "Gestão financeira pessoal com assistente por IA",
     "url": "http://plutus.like",
-    "icon": "💰",
+    "icon": "./assets/images/apps/plutus.png",
     "status": "offline",
     "category": "Gestão",
     "color": "#22c55e"
@@ -112,7 +121,7 @@
     "name": "Cerberus",
     "description": "Gerenciador de senhas",
     "url": "http://cerberus.like",
-    "icon": "🔐",
+    "icon": "./assets/images/apps/cerberus.png",
     "status": "offline",
     "category": "Segurança",
     "color": "#1e3a8a"
@@ -122,7 +131,7 @@
     "name": "Raven",
     "description": "Assistente pessoal inteligente para o dia a dia com integração completa",
     "url": "http://raven.like",
-    "icon": "🐦‍⬛",
+    "icon": "./assets/images/apps/raven.png",
     "status": "offline",
     "category": "Assistentes",
     "color": "#7c3aed"
@@ -131,7 +140,7 @@
     "name": "Calliope",
     "description": "Interface de chat com IA para perguntas gerais, criação e aprendizado",
     "url": "http://caliope.like",
-    "icon": "💬",
+    "icon": "./assets/images/apps/calliope.png",
     "status": "offline",
     "category": "IA",
     "color": "#8b5cf6"
@@ -140,7 +149,7 @@
     "name": "Saraswati",
     "description": "Aplicação com foco em aprendizado com tutores e IA",
     "url": "http://saraswati.like",
-    "icon": "📚",
+    "icon": "./assets/images/apps/saraswati.png",
     "status": "offline",
     "category": "Educação",
     "color": "#f472b6"
@@ -149,7 +158,7 @@
     "name": "Demeter",
     "description": "Assistente nutricional com IA para receitas, cardápio e avaliações",
     "url": "http://demeter.like",
-    "icon": "🥗",
+    "icon": "./assets/images/apps/demeter.png",
     "status": "offline",
     "category": "Saúde",
     "color": "#84cc16"
@@ -158,7 +167,7 @@
     "name": "Hercules",
     "description": "Personal trainer virtual com foco em saúde e bem-estar",
     "url": "http://hercules.like",
-    "icon": "🏋️",
+    "icon": "./assets/images/apps/hercules.png",
     "status": "offline",
     "category": "Saúde",
     "color": "#ef4444"
@@ -167,25 +176,16 @@
     "name": "Quíron",
     "description": "Mentoria de carreira com IA para CV, entrevistas e LinkedIn",
     "url": "http://quiron.like",
-    "icon": "🧑‍💼",
+    "icon": "./assets/images/apps/quiron.png",
     "status": "offline",
     "category": "Produtividade",
     "color": "#0f766e"
   },
   {
-    "name": "Loki",
-    "description": "Assistente criativo com IA para redes sociais",
-    "url": "http://loki.like",
-    "icon": "📱",
-    "status": "offline",
-    "category": "Criatividade",
-    "color": "#ec4899"
-  },
-  {
     "name": "Ares",
     "description": "Servidor de jogos",
     "url": "http://ares.like",
-    "icon": "🎮",
+    "icon": "./assets/images/apps/ares.png",
     "status": "offline",
     "category": "Entretenimento",
     "color": "#dc2626"
@@ -194,18 +194,9 @@
     "name": "Seshat",
     "description": "Gerenciador de arquivos",
     "url": "http://seshat.like",
-    "icon": "📚",
+    "icon": "./assets/images/apps/seshat.png",
     "status": "offline",
     "category": "Educação",
     "color": "#f472b6"
-  },
-  {
-    "name": "InventoryHub",
-    "description": "Gestão da casa com inventários e IA para organização",
-    "url": "http://inventario.like",
-    "icon": "📦",
-    "status": "offline",
-    "category": "Casa",
-    "color": "#a855f7"
   }
 ]
