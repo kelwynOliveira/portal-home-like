@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { redirect } from "next/navigation";
+import Link from "next/link";
+
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -23,41 +26,45 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Eye, EyeOff } from "lucide-react";
+import { toast } from "sonner";
+import { Toaster } from "@/components/ui/sonner";
 
-const formSchema = z.object({
-  email: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-  password: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-});
+import { Eye, EyeOff } from "lucide-react";
+import { loginAdmin } from "./_actions/login";
+import { loginSchema } from "./_actions/schema";
 
 export default function ProfileForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof loginSchema>>({
+    resolver: zodResolver(loginSchema),
     defaultValues: {
       email: "",
       password: "",
     },
   });
 
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof loginSchema>) {
+    const formData = new FormData();
+    formData.append("email", values.email);
+    formData.append("password", values.password);
+
+    const res = await loginAdmin(formData);
+
+    if (res.success) {
+      redirect("/admin");
+    } else {
+      toast(res.message || "Erro de login: Credenciais inválidas");
+    }
   }
 
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="flex min-h-screen items-center justify-center">
+      <Toaster />
       <Card className="w-full max-w-sm rounded-2xl bg-white/10 backdrop-blur-md">
         <CardHeader>
-          <CardTitle>Login to admin account</CardTitle>
-          <CardDescription>Enter with your admin email account</CardDescription>
+          <CardTitle>Entre na conta de administrador</CardTitle>
+          <CardDescription>Insira o email de administrador</CardDescription>
         </CardHeader>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -69,9 +76,9 @@ export default function ProfileForm() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel htmlFor={field.name}>Email</FormLabel>
                         <FormControl>
-                          <Input id="email" type="email" {...field} />
+                          <Input id={field.name} type="email" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -85,19 +92,11 @@ export default function ProfileForm() {
                   render={({ field }) => (
                     <div className="grid gap-2">
                       <FormItem>
-                        <div className="flex items-center">
-                          <FormLabel>Password</FormLabel>
-                          <a
-                            href="#"
-                            className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                          >
-                            Forgot password?
-                          </a>
-                        </div>
+                        <FormLabel htmlFor={field.name}>Senha</FormLabel>
                         <div className="relative">
                           <FormControl>
                             <Input
-                              id="password"
+                              id={field.name}
                               type={showPassword ? "text" : "password"}
                               className="pr-10"
                               {...field}
@@ -128,10 +127,16 @@ export default function ProfileForm() {
             <CardFooter className="flex-col gap-2">
               <Button
                 type="submit"
-                className="w-full text-white gradient-bg hover:cursor-pointer"
+                className="w-full text-white text-[1rem] gradient-bg uppercase rounded-md transition-all duration-200 ease-in-out hover:scale-105 hover:cursor-pointer "
               >
                 Login
               </Button>
+              <Link
+                href="/"
+                className="text-center p-2 w-full text-white text-[1rem] uppercase rounded-md transition-all duration-200 ease-in-out hover:scale-105 hover:cursor-pointer "
+              >
+                Home
+              </Link>
             </CardFooter>
           </form>
         </Form>
