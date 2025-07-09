@@ -1,21 +1,49 @@
-import { Button } from "@/components/ui/button";
-import { logoutAdmin } from "../login/_actions/logout";
+import { Toaster } from "sonner";
+import { AddEditAppDialog } from "./_components/add-edit-app-dialog";
+import { columns, App } from "./_components/columns";
+import { DataTable } from "./_components/data-table";
+import AdminHeader from "./_components/header";
+import { promises as fs } from "fs";
+import path from "path";
 
-export default function Admin() {
+const appsFilePath = path.join(process.cwd(), "src", "data", "apps.json");
+
+async function getData(): Promise<App[]> {
+  try {
+    const fileContent = await fs.readFile(appsFilePath, "utf-8");
+    const apps: App[] = JSON.parse(fileContent);
+    return apps;
+  } catch (error: unknown) {
+    if (
+      error &&
+      typeof error === "object" &&
+      "code" in error &&
+      (error as { code?: string }).code === "ENOENT"
+    ) {
+      console.warn("Arquivo apps.json não encontrado. Retornando array vazio.");
+    } else {
+      console.error("Erro ao ler apps.json:", error);
+    }
+    return [];
+  }
+}
+
+export default async function Admin() {
+  const data = await getData();
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-3xl font-bold mb-6">Página de Administração</h1>
-      <form action={logoutAdmin} className="mb-4">
-        <Button
-          type="submit"
-          className="uppercase text-white bg-red-600 hover:bg-red-700 rounded-md px-6 py-3 shadow-lg transition-all duration-200 ease-in-out hover:scale-105"
-        >
-          Logout
-        </Button>
-      </form>
-      <div className="text-lg text-gray-700 dark:text-gray-300">
-        Bem-vindo à área de administração.
+    <div className="p-6">
+      <AdminHeader />
+
+      <div className="mb-2 flex justify-between">
+        <span className="text-lg text-gray-700 dark:text-gray-300">
+          Bem-vindo à área de administração.
+        </span>
+        <AddEditAppDialog />
       </div>
+
+      <DataTable columns={columns} data={data} />
+      <Toaster />
     </div>
   );
 }
