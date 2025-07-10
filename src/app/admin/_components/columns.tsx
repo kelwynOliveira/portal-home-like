@@ -7,10 +7,39 @@ import z from "zod";
 import { AddEditAppDialog } from "./add-edit-app-dialog";
 import { DeleteAppDialog } from "./delete-app-dialog";
 import { appSchema } from "../_action/schema";
+import Image from "next/image";
 
 export type App = z.infer<typeof appSchema>;
 
 export const columns: ColumnDef<App>[] = [
+  {
+    accessorKey: "color",
+    header: "",
+    cell: "",
+  },
+  {
+    accessorKey: "icon",
+    header: "Ícone",
+    cell: ({ row }) => {
+      const icon = row.getValue("icon") as string;
+      const color = row.getValue("color") as string;
+
+      return (
+        <div
+          className="w-10 h-10 rounded-[8px] flex items-center justify-center"
+          style={{ background: color }}
+        >
+          <Image
+            className="w-6 h-6 object-contain"
+            src={icon}
+            alt="App Icon"
+            width="36"
+            height="36"
+          />
+        </div>
+      );
+    },
+  },
   {
     accessorKey: "name",
     header: ({ column }) => {
@@ -24,7 +53,7 @@ export const columns: ColumnDef<App>[] = [
         </Button>
       );
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("name")}</div>,
+    cell: ({ row }) => <div className="capitalize">{row.getValue("name")}</div>,
   },
   {
     accessorKey: "category",
@@ -33,6 +62,9 @@ export const columns: ColumnDef<App>[] = [
   {
     accessorKey: "description",
     header: "Descrição",
+    cell: ({ row }) => (
+      <div className="text-wrap">{row.getValue("description")}</div>
+    ),
   },
   {
     accessorKey: "actions",
