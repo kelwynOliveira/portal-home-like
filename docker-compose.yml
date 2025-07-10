@@ -1,0 +1,20 @@
+services:
+  like-app:
+    build: .
+    container_name: like-home-server
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
+    volumes:
+      - ./src/data/apps.json:/app/src/data/apps.json
+      - ./public/assets/apps-images:/app/public/assets/apps-images
+#     networks:
+#       - like-network
+
+# networks:
+#   like-network:
+#     driver: bridge
