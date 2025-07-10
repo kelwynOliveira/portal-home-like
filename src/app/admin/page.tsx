@@ -32,18 +32,26 @@ export default async function Admin() {
   const data = await getData();
 
   return (
-    <div className="p-6">
+    <>
       <AdminHeader />
 
-      <div className="mb-2 flex justify-between">
-        <span className="text-lg text-gray-700 dark:text-gray-300">
-          Bem-vindo à área de administração.
-        </span>
-        <AddEditAppDialog />
+      <div className="max-w-7xl mx-auto mb-4">
+        <div className="sm:flex justify-between items-center">
+          <h2 className="text-lg text-gray-700 dark:text-gray-300">
+            Bem-vindo à área de administração.
+          </h2>
+          <AddEditAppDialog />
+        </div>
       </div>
 
-      <DataTable columns={columns} data={data} />
+      <main>
+        <div className="w-full overflow-x-auto">
+          <div className="mx-auto max-w-7xl">
+            <DataTable columns={columns} data={data} />
+          </div>
+        </div>
+      </main>
       <Toaster />
-    </div>
+    </>
   );
 }
