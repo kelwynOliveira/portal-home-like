@@ -13,7 +13,7 @@ export async function loginAdmin(formData: FormData) {
     const cookieStore = await cookies();
     cookieStore.set("admin_logged", "true", {
       httpOnly: true,
-      secure: true,
+      // secure: true,
       path: "/",
       maxAge: 60 * 60 * 24,
     });
