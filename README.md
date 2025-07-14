@@ -1,4 +1,8 @@
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Self-Hosted](https://img.shields.io/badge/self--hosted-yes-brightgreen?style=for-the-badge)
+
 # 🏡 LiKe Home Server Portal
+
+A private dashboard to access, organize, and monitor all self-hosted services in our home. Fully built with **Next.js + TypeScript + Docker**.
 
 ---
 
@@ -8,9 +12,28 @@ The **LiKe Home Server Portal** is a centralized portal designed to manage and a
 
 ---
 
+## 🎯 Purpose
+
+- ✅ **Personal**: A reliable and clean interface to manage internal tools used at home.
+- 🚀 **Professional**: A demonstration of my ability to design, build, and deploy complete systems.
+
+---
+
 ## 🖼️ Preview
 
+### Home page
+
 ![Home Page](public/assets/homepage.png)
+
+### Login Page
+
+![Login Page](public/assets/login-page.png)
+
+### Admin Page
+
+![Admin Page](public/assets/admin-page.png)
+
+---
 
 ---
 
@@ -18,109 +41,113 @@ The **LiKe Home Server Portal** is a centralized portal designed to manage and a
 
 - **Application Portal:** A web interface to list and access all my applications.
 - **Filtering and Search:** Quickly search my applications by name, description, or category.
+- **Status Monitoring** – Shows whether each app is online/offline (ping check)
 - **Responsive Design:** Adapts seamlessly to various screen sizes.
-- **Easy Setup:** Managed via Docker and Nginx for simplified deployment.
+- **Admin Area** – Login-protected panel to create, edit and delete apps
+- **Persistent Storage** – Uses a JSON file as the single source of truth
+- **Auth via Cookie** – Login creates a secure cookie with persistence
+- **Easy Setup:** Managed via Docker for simplified deployment.
 
 ---
 
-## ⚙️ How to Set Up and Run
+## 🔐 Authentication
 
-This project leverages **Docker** and **Nginx** for efficient deployment.
+Admin login is protected using credentials defined in `.env`. After successful login, a secure cookie is set with 24h expiration to maintain admin state.
+
+```ts
+// src/app/login/_actions/login.ts
+cookieStore.set("admin_logged", "true", {
+  httpOnly: true,
+  path: "/",
+  maxAge: 60 * 60 * 24,
+});
+```
 
 ---
 
-### 1️⃣ Prerequisites
+## 📦 Why JSON Instead of a Database?
 
-- **Docker** and **Docker Compose** installed on server.
-- A `traefik-net` Docker network configured (or adjust `docker-compose.yml` to match your network setup).
+For a small-scale internal system with low-frequency updates, a simple apps.json file offers:
+
+- Zero setup or maintenance overhead
+- Persistent and human-readable format
+- Perfect fit for Docker volume mounting
+- No external service dependencies
+
+It’s a pragmatic choice — fast, lightweight, and perfectly tailored for this use case.
 
 ---
 
-### 2️⃣ Project Structure
-
-Ensure your file structure on the server matches this:
+## 📁 File Structure (Simplified)
 
 ```
-.
+├── src
+│   ├── app
+│   │   ├── _home             # Public homepage
+│   │   ├── admin             # Admin dashboard
+│   │   ├── api               # Status check & API routes
+│   │   ├── login             # Admin login system
+│   ├── data
+│   │   └── apps.json         # Core data source (acts as DB)
+│   └── components            # UI primitives
+├── public
+│   ├── assets
+│   │   └── apps-images       # App icons
+│   └── favicon/             # Custom favicon set
 ├── docker-compose.yml
-├── portal/
-│   ├── index.html
-│   ├── style/
-│   │   └── style.css
-│   ├── js/
-│   │   └── script.js
-│   └── data/
-│       └── apps.json  # JSON file with my application list
-└── assets/
-```
-
-The `apps.json` file list my applications in this format:
-
-```json
-[
-  {
-    "name": "App Name",
-    "description": "Description of the App",
-    "url": "http://app.url",
-    "icon": "✨",
-    "status": "online",
-    "category": "Productivity",
-    "color": "#HEX_COLOR"
-  },
-  {
-    "name": "Another App",
-    "description": "An offline app",
-    "url": "http://another.app",
-    "icon": "🔗",
-    "status": "offline",
-    "category": "Entertainment",
-    "color": "#1e293b"
-  }
-]
+├── Dockerfile
 ```
 
 ---
 
-### 3️⃣ Run the Service
+## 🚀 Running the Portal
 
-From your project's root directory (where `docker-compose.yml` is located), execute:
+Set the credentials (.env file):
+
+```
+ADMIN_EMAIL=your@email.com
+ADMIN_PASSWORD=password
+```
+
+Make sure to mount the correct volumes for:
+
+- /src/data/apps.json
+- /public/assets/apps-images/
+
+Example:
+
+```yml
+volumes:
+  - /mnt/ssd/portal-like/src/data/:/app/src/data/
+  - /mnt/ssd/portal-like/public/assets/apps-images:/app/public/assets/apps-images
+```
+
+Run docker compose
 
 ```bash
-docker-compose up -d
+docker-compose up -d --build
 ```
-
-This command will download the Nginx image, create the `portal` container, and start the service.
 
 ---
 
-### 4️⃣ Access the Portal
+### 🌐 Accessing the Portal
 
-With the service running, you can access the portal via your browser at:
+Access it via:
 
+```bash
+http://localhost:3000
 ```
-http://home.like
-```
-
-_(**Note:** The `Host(home.like)` in `docker-compose.yml` assumes you've configured your DNS or `hosts` file to point `home.like` to your server's IP. If not, you can access it directly via your server's IP, or set up a reverse proxy like Traefik or Nginx Proxy Manager.)_ [Reference on how to setup.](https://github.com/kelwynOliveira/infra-like)
 
 ---
 
-## ✨ How It Works
+### 🧪 Status Check Logic
 
-The **LiKe Home Server** is a static web portal served by Nginx.
-
-- `index.html` provides the main page structure.
-- `style/style.css` handles styling and layout.
-- `js/script.js` is responsible for:
-  - Loading application information from `data/apps.json`.
-  - Dynamically rendering each application's card, separating them by status (online/offline).
-  - Implementing search and filtering functionality.
-- `docker-compose.yml` configures an Nginx container to serve the HTML, CSS, and JavaScript files, and defines rules for integration with Traefik (if you're using it as a reverse proxy).
+Each app listed in apps.json is pinged by a serverless route (/api/status-check) to update its status (online/offline) on the homepage.
 
 ---
 
 ## 📌 Notes
 
-- Ensure your `data/apps.json` file is correctly formatted with all your application details.
-- The `http://home.like` URL is configured in `docker-compose.yml` and can be changed to your desired domain or IP.
-- For the portal to detect "online" status, your applications must be active and responding at the URLs specified in `apps.json`.
+- Fully self-hosted and manually maintained (no CI/CD).
+- Favicon and dynamic images work locally and in Docker (with volume mounts).
+- Changes made via the admin panel persist instantly via apps.json.
