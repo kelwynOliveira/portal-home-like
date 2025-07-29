@@ -22,11 +22,13 @@ jobs:
         ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
     - name: Deploy to server via SSH
+      env:
+        SSH_USER: ${{ secrets.SSH_USER }}
+        SSH_HOST: ${{ secrets.SSH_HOST }}
       run: |
-        ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+        ssh -i ~/.ssh/id_ed25519 $SSH_USER@$SSH_HOST << 'EOF'
           cd /home/like/apps/portal-home-like
           git pull origin main
-          cd /home/like/apps/
-          docker compose down server-portal
+          cd /home/like/apps
           docker compose up -d --build server-portal
         EOF

@@ -3,7 +3,7 @@
     "id": "5f3394c2-e327-4e8e-8556-f13a3c818e5d",
     "name": "Fenrir",
     "description": "Bloqueador de anúncios e DNS local",
-    "url": "http://fenrir.like/admin",
+    "url": "https://fenrir.lik3.net/admin",
     "icon": "/assets/apps-images/0b823a26-87da-4392-a19e-8ee67306c946.svg",
     "category": "Segurança",
     "color": "linear-gradient(135deg, #3b82f6, #8b5cf6)"
@@ -12,7 +12,7 @@
     "id": "3fdefbfd-11ba-4967-bbfb-3870c991c81a",
     "name": "n8n-home",
     "description": "Automação de fluxos de trabalho e integrações entre serviços",
-    "url": "http://n8n.like",
+    "url": "https://n8n.lik3.net",
     "icon": "/assets/apps-images/5db8371d-aeb2-4c4d-95f8-cf3449b62ea3.svg",
     "category": "Automação",
     "color": "linear-gradient(135deg, #0a63ea, #fb006e)"
@@ -21,7 +21,7 @@
     "id": "7d907371-4952-43ca-91f5-81911902be48",
     "name": "Traefik",
     "description": "Proxy reverso e roteamento dinâmico de aplicações",
-    "url": "http://traefik.like",
+    "url": "https://traefik.lik3.net",
     "icon": "/assets/apps-images/54b905b7-bf76-4d0d-8bc9-e0a624696eb8.svg",
     "category": "Infraestrutura",
     "color": "linear-gradient(135deg, #ffffff, #ee0000)"
@@ -30,7 +30,7 @@
     "id": "f66e84cc-40c5-4d87-aee4-0f321011a679",
     "name": "Sleipnir",
     "description": "Assistente de viagens com IA para planejamento, rotas e recomendações",
-    "url": "http://sleipnir.like",
+    "url": "https://sleipnir.lik3.net",
     "icon": "/assets/apps-images/8f2fbd72-b952-44d6-91e4-17aa433a54cf.svg",
     "category": "Assistentes",
     "color": "linear-gradient(135deg, #ffffff, #999999)"
