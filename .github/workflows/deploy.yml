@@ -14,14 +14,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Deploy to server via SSH
-      env:
-        SSH_USER: ${{ secrets.SSH_USER }}
-        SSH_HOST: ${{ secrets.SSH_HOST }}
+    - name: Deploy to server
       run: |
-        ssh -i ~/.ssh/id_ed25519 $SSH_USER@$SSH_HOST << 'EOF'
-          cd /home/like/apps/portal-home-like
-          git pull origin main
-          cd /home/like/apps
-          docker compose up -d --build server-portal
-        EOF
+        cd /home/like/apps/portal-home-like
+        git pull origin main
+        cd /home/like/apps
+        docker compose up -d --build server-portal
