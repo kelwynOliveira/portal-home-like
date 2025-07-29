@@ -6,6 +6,7 @@ export default function HomePage() {
     <div className="p-8 space-y-8">
       <Header />
       <ClientHome />
+      Test CI/CD
     </div>
   );
 }
