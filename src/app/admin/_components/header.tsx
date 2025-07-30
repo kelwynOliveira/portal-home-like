@@ -1,13 +1,16 @@
 import { logoutAdmin } from "@/app/login/_actions/logout";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function AdminHeader() {
   return (
     <header className="max-w-7xl mx-auto">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-6 gradient-bg text-gradient">
-          LiKe Home Server
-        </h1>
+        <Link href="/" className="flex items-center gap-2">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 gradient-bg text-gradient">
+            LiKe Home Server
+          </h1>
+        </Link>
         <form action={logoutAdmin} className="mb-4">
           <Button
             type="submit"
